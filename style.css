@@ -1,6 +1,6 @@
 @font-face {
     font-family: "norse-bold";
-    src: 
+    src:
         url("assets/fonts/norse-bold-webfont.woff2") format("woff2"),
         url("assets/fonts/norse-bold-webfont.woff") format("woff");
     font-weight: bold;
@@ -13,25 +13,16 @@
 }
 
 body {
-    height: 100vh;
-    background-color: aliceblue;
+    min-height: 100vh;
     display: flex;
-}
-
-label,
-input {
-    display: block;
-}
-
-.input-pair {
-    display: flex;
-    justify-content: space-between;
-
+    background-color: rgb(223, 231, 237);
 }
 
 .left-pane {
     width: 40%;
     background-image: url("assets/images/halie-west-25xggax4bSA-unsplash.jpg");
+    background-size: cover;
+    padding-bottom: 5px;
     color: white;
     display: flex;
     flex-direction: column;
@@ -39,32 +30,105 @@ input {
     align-items: center;
 }
 
-a,
-a:hover,
-a:focus,
-a:active {
-  color: white; 
-}
-
 p.logo {
     font-family: "norse-bold";
     font-size: 96px;
     margin-top: 96px;
-    
+
     background-color: #00000032;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+p.image-credit {
+    font-size: 18px;
+}
+
+p.image-credit a:link,
+p.image-credit a:visited,
+p.image-credit a:hover,
+p.image-credit a:focus,
+p.image-credit a:active {
+    color: white;
+}
+
+/* Right pane styles*/
+
 .right-pane {
     width: 60%;
-    margin: 15px 30px 15px 15px;
+    margin: 120px 0;
 }
 
+.right-pane>* {
+    padding: 0 192px 0 48px;
+}
 
-.right-pane > p {
+.text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    line-height: 1.2;
+}
+
+.text p:first-child {
+    margin-bottom: 18px;
+}
+
+/* Form styles */
+
+form {
+    background-color: white;
+    margin: 10px 0;
+    box-shadow: 0 4px 4px rgb(200, 199, 199);
+}
+
+.form-controls {
+    padding: 18px 0;
+}
+
+.form-controls p {
+    font-size: 24px;
+
+}
+
+.input-pair {
+    display: flex;
+    gap: 96px;
+    margin: 15px 0;
+}
+
+form label,
+form input {
+    display: block;
+}
+
+form input {
+    border-color: #E5E7EB;
+    width: 225px;
+    height: 25px;
     font-size: 18px;
-    font-weight: bold;
+    padding: 2px 5px;
 }
 
+form input:focus {
+    outline: none;
+    border-color: blue;
+    box-shadow: 0 4px 4px rgb(200, 199, 199);
+}
+
+input[type="password"]:invalid {
+    border-color: red;
+
+}
+
+button {
+    background-color: #596D48;
+    font-size: 16px;
+    font-weight: 600;
+    height: 40px;
+    width: 175px;
+    color: white;
+    border-radius: 5px;
+    margin: 20px 0;
+}
